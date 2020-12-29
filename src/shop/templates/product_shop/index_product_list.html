@@ -175,8 +175,8 @@ Body Section
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Diamonds </a></li>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>Loose Beads</a></li>
 		<li><a href="products.html"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
-		<li style="border:0"> &nbsp;</li>
 		-->
+		<li style="border:0"> &nbsp;</li>
 		<li> <a class="totalInCart" href="cart.html"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0.00</span></strong></a></li>
 	</ul>
 </div>
@@ -189,11 +189,12 @@ Body Section
 			  </div>
 			  <div class="well well-small" ><a href="#"><img src=" {% static 'assets/img/paypal.jpg' %} " alt="payment method paypal"></a></div>
 			
-			<a class="shopBtn btn-block" href="#">Upcoming products <br><small>Click to view</small></a>
+			<a class="shopBtn btn-block" href=" {% url 'shop:product-list' %} ">Upcoming products <br><small>Click to view</small></a>
 			<br>
 			<br>
 			<ul class="nav nav-list promowrapper">
-			<li>
+			<!--
+				<li>
 			  <div class="thumbnail">
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<img src=" {% static 'assets/img/bootstrap-ecommerce-templates.png' %} " alt="bootstrap ecommerce templates">
@@ -202,8 +203,10 @@ Body Section
 				</div>
 			  </div>
 			</li>
+			-->
 			<li style="border:0"> &nbsp;</li>
-			<li>
+			<!--
+				<li>
 			  <div class="thumbnail">
 				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
 				<img src=" {% static 'assets/img/shopping-cart-template.png' %} " alt="shopping cart template">
@@ -212,6 +215,7 @@ Body Section
 				</div>
 			  </div>
 			</li>
+			-->
 			<li style="border:0"> &nbsp;</li>
 			<li>
 			  <div class="thumbnail">

@@ -116,3 +116,6 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# key for storing cart in user session
+CART_SESSION_ID = 'cart'
