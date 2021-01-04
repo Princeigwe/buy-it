@@ -16,7 +16,7 @@ class Cart(object):
         if not cart:
             # create an empty cart key
             cart = self.session[settings.CART_SESSION_ID] = {}
-            self.cart = cart
+        self.cart = cart
 
     #method for adding product
     def add(self, product, quantity=1, override_quantity=False):
@@ -43,7 +43,7 @@ class Cart(object):
 
     # the remove function for cart
     def remove(self, product):
-        product_id = product.id
+        product_id = str(product.id)
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
@@ -51,7 +51,7 @@ class Cart(object):
     #method for iterating through items in cart and getting them from the database
     def __iter__(self):
         #all products in the cart
-        product_ids = self.cart.keys
+        product_ids = self.cart.keys()
         # getting the product objects and adding to the cart
         products = Product.objects.filter(id__in=product_ids)
 

@@ -4,6 +4,7 @@ from shop.models import Product
 from .cart import Cart
 from .forms import CART_ADD_PRODUCT_FORM
 
+
 # Create your views here.
 
 # view for adding product to cart
@@ -11,7 +12,7 @@ from .forms import CART_ADD_PRODUCT_FORM
 def cart_add_product(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
-    form = CART_ADD_PRODUCT_FORM
+    form = CART_ADD_PRODUCT_FORM(request.POST)
     if form.is_valid():
         cd=form.cleaned_data
         cart.add(
@@ -19,7 +20,7 @@ def cart_add_product(request, product_id):
             quantity=cd['quantity'],
             override_quantity=cd['override']
         )
-    return redirect('shop:cart_detail')
+    return redirect('cart:cart_detail')
 
 #view for removing product from the cart
 @require_POST
@@ -27,7 +28,7 @@ def cart_remove_product(request, product_id):
     cart = Cart(request)
     product = get_object_or_404(Product, id=product_id)
     cart.remove(product)
-    return redirect('shop:cart_detail')
+    return redirect('cart:cart_detail')
 
 def cart_detail(request):
     cart = Cart(request)

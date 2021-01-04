@@ -99,13 +99,15 @@ Navigation Bar Section
 		  </a>
 		  <div class="nav-collapse">
 			<ul class="nav">
-			  <li class="active"><a href="index.html">Home	</a></li>
-			  <li class=""><a href="list-view.html">List View</a></li>
-			  <li class=""><a href="grid-view.html">Grid View</a></li>
+			  <li class="active"><a href="{% url 'shop:product-list' %}">Home	</a></li>
 			  <!--
+				  <li class=""><a href="list-view.html">List View</a></li>
+			  <li class=""><a href="grid-view.html">Grid View</a></li>
+			  
 				  <li class=""><a href="three-col.html">Three Column</a></li>
 			  <li class=""><a href="four-col.html">Four Column</a></li>
 			  <li class=""><a href="general.html">General Content</a></li>
+			  
 			  -->
 			</ul>
 			<form action="#" class="navbar-search pull-left">
@@ -251,12 +253,17 @@ Body Section
 				<h3>{{product.name}}  [ $ {{product.price}} ]</h3>
 				<hr class="soft"/>
 				
-				<form class="form-horizontal qtyFrm">
+				<form class="form-horizontal qtyFrm" action=" {% url 'cart:add_product' product.id %} " method="post">
+					{% csrf_token %}
 				  <div class="control-group">
 					<label class="control-label"><span>$ {{product.price}} </span></label>
-					<div class="controls">
+					{{cart_add_product_form}}
+					<!--
+						<div class="controls">
 					<input type="number" class="span6" placeholder="Qty.">
 					</div>
+					-->
+
 				  </div>
 				
 				  <!--
