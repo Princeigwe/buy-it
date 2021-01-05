@@ -56,9 +56,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.get_current_year_to_context',
-                
                 'cart.context_processors.cart'
-                
             ],
         },
     },
