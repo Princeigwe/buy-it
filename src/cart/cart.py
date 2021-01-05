@@ -28,10 +28,12 @@ class Cart(object):
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
 
-        # if quantity is overidden...
+        # if quantity is not overidden...
         if override_quantity:
-            # the value of the key quqntity of key product_id of the cart is 1
+            # the quantity value of product_id remains the same
             self.cart[product_id] ['quantity'] = quantity
+            
+        # else change the quantity value
         else:
             self.cart[product_id] ['quantity'] += quantity
         self.save()
@@ -74,6 +76,7 @@ class Cart(object):
 
     #method for getting total price of all products int the cart
     def get_total_price(self):
+        #return sum(item['price'] * item['quantity'] for item in self.cart.values())
         return sum(item['price'] * item['quantity'] for item in self.cart.values())
 
     #method for clearing the cart

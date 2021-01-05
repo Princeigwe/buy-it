@@ -42,7 +42,15 @@
 				<a href="#"><span class="icon-user"></span> My Account</a> 
 				<a href="register.html"><span class="icon-edit"></span> Free Register </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
-				<a href="cart.html"><span class="icon-shopping-cart"></span> 0 Item(s) - <span class="badge badge-warning"> $0.00</span></a>
+				<a href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
+			
+					{% if total_items > 0 %}
+						{{total_items}} items
+					{% else %}
+					0 Item 
+					{% endif %}
+						
+				{% endwith %} -</a>
 			</div>
 		</div>
 	</div>
@@ -76,8 +84,10 @@ Lower Header Section
 	</div>
 	<div class="span4 alignR">
 	<p><br> <strong> Support (24/7) :  +234 905 8114 264 </strong><br><br></p>
-	<span class="btn btn-mini">[ 0 ] <span class="icon-shopping-cart"></span></span>
+	<!--
+		<span class="btn btn-mini">[ 0 ] <span class="icon-shopping-cart"></span></span>
 	<span class="btn btn-warning btn-mini">$</span>
+	-->
 	<!--
 		<span class="btn btn-mini">&pound;</span>
 	<span class="btn btn-mini">&euro;</span>
@@ -722,7 +732,7 @@ accompanied by English versions from the 1914 translation by H. Rackham.
 		<a href="#"><img src="{% static 'assets/img/visa.png' %}" alt="payment"></a>
 		<a href="#"><img src="{% static 'assets/img/disc.png' %}" alt="payment"></a>
 	</p>
-	<span>Copyright &copy; 2013<br> bootstrap ecommerce shopping template</span>
+	<span>Copyright &copy; 2020 - {{current_year}}<br> bootstrap ecommerce shopping template</span>
 </div>
 </div>
 <a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
