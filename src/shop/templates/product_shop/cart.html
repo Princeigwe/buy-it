@@ -305,7 +305,7 @@ Body Section
             </table>
 			-->		
 	<a href=" {% url 'shop:product-list' %} " class="shopBtn btn-large"><span class="icon-arrow-left"></span> Continue Shopping </a>
-	<a href="#" class="shopBtn btn-large pull-right"> Checkout <span class="icon-arrow-right"></span></a>
+	<a href="{% url 'orders:order_create' %}" class="shopBtn btn-large pull-right"> Checkout <span class="icon-arrow-right"></span></a>
 
 </div>
 </div>
