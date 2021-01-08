@@ -4,8 +4,8 @@ from django.urls import reverse
 # Create your models here.
 
 class Category(models.Model):
-    name = models.CharField(max_length=200)
-    slug = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, db_index=True)
+    slug = models.CharField(max_length=200, unique=True)
 
     class Meta():
         ordering = ['name']
@@ -34,6 +34,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
         return reverse('shop:product-detail', args=[self.id, self.slug])

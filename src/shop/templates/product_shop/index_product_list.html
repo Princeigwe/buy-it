@@ -51,7 +51,7 @@
 				<a href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
 			
 					{% if total_items > 0 %}
-						{{total_items}} items
+						{{total_items}} items-  ${{cart.get_total_price}}
 					{% else %}
 					0 Item 
 					{% endif %}

@@ -123,3 +123,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # key for storing cart in user session
 CART_SESSION_ID = 'cart'
+
+
+# starting rabbitmq server, run "sudo systemctl enable rabbitmq-server" on terminal,
+# then run "sudo systemctl start rabbitmq-server"
+# checking status of rabbitmq-server run "sudo systemctl status rabbitmq-server"
+# run "sudo rabbitmqctl add_user <username> <password>" to add user 
+# run "sudo rabbitmqctl set_user_tags <username> administrator" to set the user as an admin
+# run "sudo rabbitmqctl set_permissions -p / <username> ".*" ".*" ".*"  "  to set permissions for the user
+

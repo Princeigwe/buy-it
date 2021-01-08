@@ -3,6 +3,7 @@ from .forms import OrderCreateForm
 from .models import OrderItem
 from cart.cart import Cart
 
+
 # Create your views here.
 
 def order_create(request):
@@ -14,7 +15,7 @@ def order_create(request):
             # for each item in cart...
             for item in cart:
                 # create an order item for it
-                OrderItem.objects.create(order=order, product=item['product'], price=item['price'], quantity=item['quantity'] )
+                OrderItem.objects.create(order=order, product=item['product'], price=(item['price']), quantity=item['quantity'] )
             
             cart.clear()
             return render(request, 'orders/created.html', {'order': order})
