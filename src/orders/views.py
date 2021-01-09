@@ -18,11 +18,11 @@ def order_create(request):
                 OrderItem.objects.create(order=order, product=item['product'], price=(item['price']), quantity=item['quantity'] )
             
             cart.clear()
-            return render(request, 'orders/created.html', {'order': order})
+            return render(request, 'orders/created_order.html', {'order': order})
     
     else:
         form = OrderCreateForm()
-    return render(request, 'orders/create.html', {'cart': cart, 'form': form})
+    return render(request, 'orders/create_order.html', {'cart': cart, 'form': form})
 
 """ 
 the order create view is used to place order after adding items to cart.

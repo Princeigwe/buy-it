@@ -8,6 +8,7 @@ class Order(models.Model):
     last_name = models.CharField(max_length=250)
     email = models.EmailField()
     address = models.CharField(max_length=250)
+    zip_code = models.CharField(max_length=20, default="00000")
     city = models.CharField(max_length=300)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

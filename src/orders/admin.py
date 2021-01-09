@@ -13,6 +13,6 @@ class OrderAdmin(admin.ModelAdmin):
     """
     docstring
     """
-    list_display = ['id', 'first_name', 'last_name', 'email', 'address', 'city', 'created', 'updated', 'paid']
+    list_display = ['id', 'first_name', 'last_name', 'email', 'address', 'city', 'zip_code', 'created', 'updated', 'paid']
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]
