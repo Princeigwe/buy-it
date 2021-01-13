@@ -132,3 +132,9 @@ CART_SESSION_ID = 'cart'
 # run "sudo rabbitmqctl set_user_tags <username> administrator" to set the user as an admin
 # run "sudo rabbitmqctl set_permissions -p / <username> ".*" ".*" ".*"  "  to set permissions for the user
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'buy_it@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
