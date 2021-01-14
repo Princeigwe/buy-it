@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import OrderCreateForm
 from .models import OrderItem
 from cart.cart import Cart
+from .tasks import order_created
 
 
 # Create your views here.
@@ -16,8 +17,10 @@ def order_create(request):
             for item in cart:
                 # create an order item for it
                 OrderItem.objects.create(order=order, product=item['product'], price=(item['price']), quantity=item['quantity'] )
-            
+
             cart.clear()
+            # launching asynchronous task, delay method will add the task to queue and execute it once a worker is available
+            order_created.delay(order.id)
             return render(request, 'orders/created_order.html', {'order': order})
     
     else:
