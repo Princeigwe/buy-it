@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+            <h3>Pay for the items you ordered here</h3>
+            <button type="button" onClick="payWithRave()">Pay</button>
+        </form>
+        <script>
+            const publicKey = "{{ key }}";
+            var email_address = "{{ emailAddress }}";
+            const totalPrice = "{{ totalPrice }}";
+            const telephone = "{{telephone}}"
+    
+            function payWithRave() {
+                var x = getpaidSetup({
+                    PBFPubKey: publicKey,
+                    //customer_email: "user@example.com",
+                    //amount: 1,
+                    customer_email: email_address,
+                    customer_phone: telephone,
+                    amount: totalPrice,
+                    currency: "NGN",
+                    txref: "rave-123456",
+                    custom_title: "Wildlife Park",
+                    onclose: function() {},
+                    callback: function(response) {
+                        var txref = response.tx.txRef;
+                        console.log("This is the response returned after a charge", response);
+                        if (
+                            response.tx.chargeResponseCode == "00" ||
+                            response.tx.chargeResponseCode == "0"
+                        ) {
+                            document.location.href = " {% url 'payments:success' %} "
+                                // redirect to a success page
+                        } else {
+                            // redirect to a failure page.
+                        }
+                        x.close();
+                    }
+                });
+            }
+        </script>
+</body>
+</html>

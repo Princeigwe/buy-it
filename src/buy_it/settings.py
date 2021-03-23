@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     # local apps
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
-    'orders.apps.OrdersConfig'
+    'orders.apps.OrdersConfig',
+    'payments.apps.PaymentsConfig',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,7 @@ EMAIL_HOST_USER = 'buy_it@gmail.com'
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+RAVE_PUBLIC_KEY = "FLWPUBK_TEST-9a0419763aaa4cb0470adc8e8195629c-X"
+RAVE_SECRET_KEY = "FLWSECK_TEST-05fd286ec89df9093b7e87afff9d7ae0-X"

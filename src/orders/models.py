@@ -13,6 +13,7 @@ class Order(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     paid = models.BooleanField(default=False)
+    telephone = models.CharField(max_length=15, default=0000, blank=False)
 
     class Meta():
         ordering = ('-created',)

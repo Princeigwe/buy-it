@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect, get_object_or_404
 from .forms import OrderCreateForm
-from .models import OrderItem
+from .models import OrderItem, Order
 from cart.cart import Cart
 from .tasks import order_created
+from django.conf import settings
+from payments.views import paymentpage
 
 
 # Create your views here.
@@ -21,7 +23,9 @@ def order_create(request):
             cart.clear()
             # launching asynchronous task, delay method will add the task to queue and execute it once a worker is available
             order_created.delay(order.id)
-            return render(request, 'orders/created_order.html', {'order': order})
+            #return render(request, 'orders/created_order.html', {'order': order})
+            #return redirect('payments:payment')
+            return redirect('payments:payment', id=order.id)
     
     else:
         form = OrderCreateForm()
