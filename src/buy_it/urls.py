@@ -4,11 +4,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    path('account/', include('account.urls', namespace='account')),
     path('admin/', admin.site.urls),
     path('cart/', include('cart.urls', namespace='cart')),
     path('', include('shop.urls', namespace='shop')),
     path('orders/', include('orders.urls', namespace='orders')),
-    path('flutterwave/', include('payments.urls', namespace='payments'))
+    path('flutterwave/', include('payments.urls', namespace='payments')),
 ]
 
 if settings.DEBUG:
