@@ -5,10 +5,12 @@ from cart.cart import Cart
 from .tasks import order_created
 from django.conf import settings
 from payments.views import paymentpage
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
+@login_required
 def order_create(request):
     cart = Cart(request)
     if request.method == 'POST':

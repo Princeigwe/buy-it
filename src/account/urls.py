@@ -19,4 +19,5 @@ urlpatterns = [
     
     # all the above urls is contained in this url below
     path('', include('django.contrib.auth.urls')),
+    path('register/', views.register, name="register")
 ]

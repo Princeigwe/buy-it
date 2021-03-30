@@ -10,6 +10,9 @@ urlpatterns = [
     path('', include('shop.urls', namespace='shop')),
     path('orders/', include('orders.urls', namespace='orders')),
     path('flutterwave/', include('payments.urls', namespace='payments')),
+    
+    # python's social authentication module url
+    path('social-auth/', include('social_django.urls', namespace='social')),
 ]
 
 if settings.DEBUG:

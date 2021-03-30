@@ -45,8 +45,8 @@
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
 				<a class="active" href="index.html"> <span class="icon-home"></span> Home</a> 
-				<a href="#"><span class="icon-user"></span> My Account</a> 
-				<a href="register.html"><span class="icon-edit"></span> Free Register </a> 
+				<a href=" {% url 'account:password_change' %} "> Change Password </a> 
+				<a href=" {% url 'account:logout' %} "> Logout </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 				<a href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
 			

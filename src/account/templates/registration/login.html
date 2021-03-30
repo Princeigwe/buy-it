@@ -233,13 +233,44 @@ Body Section
 			<div class="well">
 			<h5>CREATE YOUR ACCOUNT</h5><br/>
 			Enter your e-mail address to create an account.<br/><br/><br/>
-			<form>
+			<form action=" {% url 'account:register' %} " method="POST">
+				{% csrf_token %}
 			  <div class="control-group">
 				<label class="control-label" for="inputEmail">E-mail address</label>
 				<div class="controls">
-				  <input class="span3"  type="text" placeholder="Email">
+				  <input class="span3"  type="text" name="email" placeholder="Email">
 				</div>
 			  </div>
+
+			  <div class="control-group">
+				<label class="control-label" for="inputEmail">First Name</label>
+				<div class="controls">
+				  <input class="span3"  type="text" name="first_name" placeholder="First Name">
+				</div>
+			  </div>
+
+
+			  <div class="control-group">
+				<label class="control-label" for="inputEmail">Username</label>
+				<div class="controls">
+				  <input class="span3"  type="text" name="username" placeholder="Username">
+				</div>
+			  </div>
+
+			  <div class="control-group">
+				<label class="control-label" for="inputEmail">Password</label>
+				<div class="controls">
+				  <input class="span3"  type="password" name="password1" placeholder="Password">
+				</div>
+			  </div>
+
+			  <div class="control-group">
+				<label class="control-label" for="inputEmail">Confirm Password</label>
+				<div class="controls">
+				  <input class="span3"  type="password" name="password2" placeholder="Confirm Password">
+				</div>
+			  </div>
+
 			  <div class="controls">
 			  <button type="submit" class="btn block">Create Your Account</button>
 			  </div>
@@ -250,16 +281,16 @@ Body Section
 		<div class="span4">
 			<div class="well">
 			<h5>ALREADY REGISTERED ?</h5>
-			<form action="  " method="post" >
+			<form action=" {% url 'account:login' %} " method="post" >
 				{% csrf_token %}
 				{% if form.errors %}
 					<p>Invalid credentials</p>
 				{% endif %}
 					
 			  <div class="control-group">
-				<label class="control-label" for="inputEmail">Username</label>
+				<label class="control-label" for="inputEmail">Username or Email Address</label>
 				<div class="controls">
-				  <input class="span3"  type="text" name='username' placeholder="Username">
+				  <input class="span3"  type="text" name='username' placeholder="Username / Email">
 				</div>
 			  </div>
 			  <div class="control-group">
