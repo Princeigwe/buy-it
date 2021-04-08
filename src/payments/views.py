@@ -35,3 +35,8 @@ def paymentpage(request, id):
 @login_required
 def paymentsuccess(request):
     return render(request, "paymentsuccess.html")
+
+
+@login_required
+def paymentfailure(request):
+    return render(request, 'paymentfailure.html')

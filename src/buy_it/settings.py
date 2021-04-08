@@ -162,13 +162,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 #cart key to store cart in the user session
 CART_SESSION_ID = 'cart'
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = 'LifeBarDummy@gmail.com'
-#EMAIL_HOST_PASSWORD = 'pythonist98'
-#EMAIL_USE_TLS = True
-#EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'buyitecommerce@gmail.com'
+EMAIL_HOST_PASSWORD = '12abyz90'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
 
 
 ##before running celery worker, open rabbitmq cmd and run rabbitmq-server
@@ -203,8 +203,8 @@ RAVE_PUBLIC_KEY = "FLWPUBK_TEST-9a0419763aaa4cb0470adc8e8195629c-X"
 RAVE_SECRET_KEY = "FLWSECK_TEST-05fd286ec89df9093b7e87afff9d7ae0-X"
 
 
-LOGIN_URL = 'account:login'
-LOGOUT_URL = 'account:logout'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'shop:product-list'
 
 

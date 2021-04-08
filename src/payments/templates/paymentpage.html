@@ -41,6 +41,7 @@
                             document.location.href = " {% url 'payments:success' %} "
                                 // redirect to a success page
                         } else {
+                            document.location.href = " {% url 'payments:failure' %} "
                             // redirect to a failure page.
                         }
                         x.close();
