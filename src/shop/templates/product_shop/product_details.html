@@ -45,7 +45,7 @@
 				<a href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
 			
 					{% if total_items > 0 %}
-						{{total_items}} items- ${{cart.get_total_price}}
+						{{total_items}} items- #{{cart.get_total_price}}
 					{% else %}
 					0 Item 
 					{% endif %}
@@ -250,7 +250,7 @@ Body Section
 				<form class="form-horizontal qtyFrm" action=" {% url 'cart:add_product' product.id %} " method="post">
 					{% csrf_token %}
 				  <div class="control-group">
-					<label class="control-label"><span>$ {{product.price}} </span></label>
+					<label class="control-label"><span># {{product.price}} </span></label>
 					{{cart_add_product_form}}
 					<!--
 						<div class="controls">
@@ -593,7 +593,7 @@ Body Section
 					</div>
 					<div class="span4 alignR">
 					<form class="form-horizontal qtyFrm">
-					<h3> $140.00</h3>
+					<h3> #140.00</h3>
 					<label class="checkbox">
 						<input type="checkbox">  Adds product to compair
 					</label><br>
@@ -619,7 +619,7 @@ Body Section
 					</div>
 					<div class="span4 alignR">
 					<form class="form-horizontal qtyFrm">
-					<h3> $140.00</h3>
+					<h3> #140.00</h3>
 					<label class="checkbox">
 						<input type="checkbox">  Adds product to compair
 					</label><br>

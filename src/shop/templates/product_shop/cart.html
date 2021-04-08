@@ -45,7 +45,7 @@
 				<a class="active" href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
 			
 					{% if total_items > 0 %}
-						{{total_items}} items <span class="badge badge-warning"> ${{cart.get_total_price}} </span>
+						{{total_items}} items <span class="badge badge-warning"> #{{cart.get_total_price}} </span>
 					{% else %}
 					0 Item  in the cart	
 					{% endif %}
@@ -157,7 +157,7 @@ Body Section
 		{% with total_items=cart|length %}
 			
 			{% if total_items > 0 %}
-				{{total_items}} items are in the cart, total price is ${{cart.get_total_price}}
+				{{total_items}} items are in the cart, total price is #{{cart.get_total_price}}
 			{% else %}
 			0 Item  in the cart	
 			{% endif %}
@@ -230,7 +230,7 @@ Body Section
 							</td>
 							<td> - </td>
 							<td><span class="shopBtn"><span class="icon-ok"></span></span> </td>
-							<td> $ {{item.price}} </td>
+							<td> # {{item.price}} </td>
 							<td> 
 								<form action="{% url 'cart:add_product' product.id %}" method="post">
 									{% csrf_token %}
@@ -246,7 +246,7 @@ Body Section
 								</div>
 							</td>
 							<td>
-								$ {{item.total_price}}
+								# {{item.total_price}}
 							</td>
 						</tr>
 					{% endwith %}
@@ -255,7 +255,7 @@ Body Section
 					
                 <tr>
                 <td colspan="6" class="alignR">Total price:	</td>
-                <td> ${{cart.get_total_price}} </td>
+                <td> #{{cart.get_total_price}} </td>
                 </tr>
                 
 				</tbody>
