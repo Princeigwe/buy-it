@@ -38,9 +38,9 @@
 					<a href="#"><span class="icon-youtube"></span></a>
 					<a href="#"><span class="icon-tumblr"></span></a>
 				</div>
-				<a href="index.html"> <span class="icon-home"></span> Home</a> 
-				<a href="#"><span class="icon-user"></span> My Account</a> 
-				<a href="register.html"><span class="icon-edit"></span> Free Register </a> 
+				<a href="{% url 'shop:product-list' %}"> <span class="icon-home"></span> Home</a> 
+				<a href=" {% url 'account:password_change' %} "> Change Password </a> 
+				<a href=" {% url 'account:logout' %} "> Logout </a> 
 				<a href="contact.html"><span class="icon-envelope"></span> Contact us</a>
 				<a href="{% url 'cart:cart_detail' %}"><span class="icon-shopping-cart"></span> {% with total_items=cart|length %}
 			
@@ -197,32 +197,16 @@ Body Section
 			<br>
 			<br>
 			<ul class="nav nav-list promowrapper">
-			<li>
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="{% static 'assets/img/bootstrap-ecommerce-templates.png' %}" alt="bootstrap ecommerce templates">
-				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
-				</div>
-			  </div>
-			</li>
+			
+			<li style="border:0"> &nbsp;</li>
+			
 			<li style="border:0"> &nbsp;</li>
 			<li>
 			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="{% static 'assets/img/shopping-cart-template.png' %}" alt="shopping cart template">
+				<a class="zoomTool" href="27/penny-loafer/" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<img src="{% static 'assets/img/shoes images/Penny Loafer.jpeg' %}" alt="bootstrap template">
 				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
-				</div>
-			  </div>
-			</li>
-			<li style="border:0"> &nbsp;</li>
-			<li>
-			  <div class="thumbnail">
-				<a class="zoomTool" href="product_details.html" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
-				<img src="{% static 'assets/img/bootstrap-template.png' %}" alt="bootstrap template">
-				<div class="caption">
-				  <h4><a class="defaultBtn" href="product_details.html">VIEW</a> <span class="pull-right">$22.00</span></h4>
+				  <h4><a class="defaultBtn" href="27/penny-loafer/">VIEW</a> <span class="pull-right"># 350000</span></h4>
 				</div>
 			  </div>
 			</li>
@@ -260,7 +244,7 @@ Body Section
             </div>
 			</div>
 			<div class="span7">
-				<h3>{{product.name}}  [ $ {{product.price}} ]</h3>
+				<h3>{{product.name}}  [ # {{product.price}} ]</h3>
 				<hr class="soft"/>
 				
 				<form class="form-horizontal qtyFrm" action=" {% url 'cart:add_product' product.id %} " method="post">
