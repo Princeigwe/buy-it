@@ -215,3 +215,5 @@ LOGIN_REDIRECT_URL = 'shop:product-list'
 
 
 ## run 'stripe listen --forward-to localhost:8000/stripe_webhook/' on terminal with internet, after creating the views and url
+
+CELERY_BROKER_URL = "amqp://localhost"
