@@ -244,3 +244,34 @@ Trying again in 2.00 seconds... (1/100)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-05-01 11:47:04,891: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-03 11:19:00,338: INFO/MainProcess] Received task: orders.tasks.order_created[d60f28e0-708a-498a-a9b9-15b93b4ffda5]  
+[2021-05-03 11:19:40,501: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[d60f28e0-708a-498a-a9b9-15b93b4ffda5] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 jBwNBMKOgWAB5sRDAUr5s4V26MXDmfaWYkm_TLIQBI-RHHgVcvwGwPHe9Ix0yPHhNsPd8\n5.7.14 nwJXxN_DVPYjg8d4kJd7BWGqsWFxRozNSbQ45N47j-VGpacOpJtTtJ3HQyjAFiun>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 p10sm12651798wre.84 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 jBwNBMKOgWAB5sRDAUr5s4V26MXDmfaWYkm_TLIQBI-RHHgVcvwGwPHe9Ix0yPHhNsPd8\n5.7.14 nwJXxN_DVPYjg8d4kJd7BWGqsWFxRozNSbQ45N47j-VGpacOpJtTtJ3HQyjAFiun>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 p10sm12651798wre.84 - gsmtp')
+[2021-05-03 18:09:25,489: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-03 18:09:25,499: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-03 18:09:26,579: INFO/MainProcess] mingle: all alone
+[2021-05-03 18:09:26,605: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-03 18:09:26,605: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
