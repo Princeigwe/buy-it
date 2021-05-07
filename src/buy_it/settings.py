@@ -21,14 +21,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', default=False, cast=bool)
 #DEBUG = True
-DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['buy-it-ecommerce.herokuapp.com']
 
 
 # Application definition
@@ -105,17 +104,23 @@ DATABASES = {
    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    # }
 
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'buy_it_db',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
-    }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'buy_it_db',
+    #    'USER': 'root',
+    #    'PASSWORD': '',
+    #    'HOST': '127.0.0.1',
+    #    'PORT': '',
+    #    'OPTIONS': {
+    #        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    #    }
+    #}
+    
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
+    
+    
 
 }
 
