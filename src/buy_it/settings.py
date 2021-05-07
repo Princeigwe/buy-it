@@ -23,11 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x'
+#SECRET_KEY = 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 #ALLOWED_HOSTS = ['buy-it-ecommerce.herokuapp.com']
 ALLOWED_HOSTS = []
@@ -164,15 +166,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATIC_URL = '/static/'
-#STATICFILES_DIRS = (
-#    os.path.join(BASE_DIR, 'static'),
-#)
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -233,9 +240,9 @@ CELERY_BROKER_URL = "amqp://localhost"
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
-#import dj_database_url
-#db_from_env = dj_database_url.config(conn_max_age=500)
-#DATABASES['default'].update(db_from_env)
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # reducing staticfiles size
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
