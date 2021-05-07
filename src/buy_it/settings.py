@@ -26,10 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['buy-it-ecommerce.herokuapp.com']
+#ALLOWED_HOSTS = ['buy-it-ecommerce.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -106,21 +107,21 @@ DATABASES = {
    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    # }
 
-    #'default': {
-    #    'ENGINE': 'django.db.backends.mysql',
-    #    'NAME': 'buy_it_db',
-    #    'USER': 'root',
-    #    'PASSWORD': '',
-    #    'HOST': '127.0.0.1',
-    #    'PORT': '',
-    #    'OPTIONS': {
-    #        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-    #    }
-    #}
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'buy_it_db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
     
-    'default': dj_database_url.config(
-        default='DATABASE_URL'
-    )
+    #'default': dj_database_url.config(
+    #    default='DATABASE_URL'
+    #)
     
     
 
@@ -163,15 +164,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-#STATIC_URL = '/static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATIC_URL = '/static/'
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
@@ -232,9 +233,9 @@ CELERY_BROKER_URL = "amqp://localhost"
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#import dj_database_url
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # reducing staticfiles size
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
