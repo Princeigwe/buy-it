@@ -343,3 +343,38 @@ worker: Warm shutdown (MainProcess)
 [2021-05-06 22:54:44,395: INFO/MainProcess] mingle: searching for neighbors
 [2021-05-06 22:54:45,465: INFO/MainProcess] mingle: all alone
 [2021-05-06 22:54:45,501: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-07 20:10:10,930: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-07 20:10:10,942: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-07 20:10:12,015: INFO/MainProcess] mingle: all alone
+[2021-05-07 20:10:12,054: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-07 20:10:12,054: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-05-07 20:10:10
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7fbf842484c0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-05-09 15:09:09,742: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-09 15:09:09,752: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-09 15:09:10,865: INFO/MainProcess] mingle: all alone
+[2021-05-09 15:09:10,894: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-09 15:09:10,894: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
