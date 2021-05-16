@@ -87,7 +87,7 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .thumbnail h5,.thumbnail p{text-align:center}
 .bs-docs-sidenav > li > a {border: 0; border-bottom:1px solid #e5e5e5;}
 .thumbnail{position:relative;}
-.tag {background:url(assets/img/new.png) no-repeat 0 0; position: absolute; display:block; top: -4px;right: -18px; height:48px; width:48px;}
+.tag {background:url(/static/assets/img/new.png) no-repeat 0 0; position: absolute; display:block; top: -4px;right: -18px; height:48px; width:48px;}
 .np{padding:0}
 .totalInCart{line-height:26px;}
 .absoluteBlk{position:absolute; left:8px; top:8px; width:45%; }
