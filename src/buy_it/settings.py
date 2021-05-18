@@ -109,16 +109,20 @@ DATABASES = {
    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
    # }
 
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'buy_it_db',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+    #'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'buy_it_db',
+    #    'USER': 'root',
+    #    'PASSWORD': '',
+    #    'HOST': '127.0.0.1',
+    #    'PORT': '',
+    #    'OPTIONS': {
+    #        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    #    }
+    #}
+    
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql'
     }
     
     #'default': dj_database_url.config(
