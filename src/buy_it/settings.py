@@ -121,13 +121,9 @@ DATABASES = {
     #    }
     #}
     
-    'default':{
-        'ENGINE': 'django.db.backends.postgresql'
-    }
-    
-    #'default': dj_database_url.config(
-    #    default='DATABASE_URL'
-    #)
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
     
     
 
@@ -245,8 +241,8 @@ CELERY_BROKER_URL = "amqp://localhost"
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 # reducing staticfiles size
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
