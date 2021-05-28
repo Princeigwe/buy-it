@@ -14,12 +14,14 @@ click-didyoumean==0.0.3
 click-plugins==1.1.1
 click-repl==0.1.6
 cryptography==3.0
+decouple==0.0.7
 defusedxml==0.7.1
 dj-database-url==0.5.0
 Django==3.1.4
 django-cors-headers==3.7.0
 django-cors-middleware==1.5.0
 django-crispy-forms==1.10.0
+django-heroku==0.3.1
 django-on-heroku==1.1.2
 django-rename-app==0.1.2
 dnspython==2.1.0
@@ -56,6 +58,7 @@ Pillow==8.0.1
 prometheus-client==0.8.0
 prompt-toolkit==3.0.10
 psutil==5.8.0
+psycopg2==2.8.6
 psycopg2-binary==2.8.6
 pyasn1==0.4.8
 pycparser==2.20

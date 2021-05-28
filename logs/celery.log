@@ -385,3 +385,804 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-05-16 12:05:41,074: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-19 14:24:44,308: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-19 14:24:44,321: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-19 14:24:45,381: INFO/MainProcess] mingle: all alone
+[2021-05-19 14:24:45,424: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-19 14:24:45,425: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-22 01:25:52,613: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-22 01:25:52,627: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-22 01:25:53,713: INFO/MainProcess] mingle: all alone
+[2021-05-22 01:25:53,752: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-22 01:25:53,753: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-23 08:31:39,025: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-23 08:31:39,037: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-23 08:31:40,120: INFO/MainProcess] mingle: all alone
+[2021-05-23 08:31:40,158: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-23 08:31:40,158: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-23 20:08:58,359: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-23 20:08:58,369: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-23 20:08:59,434: INFO/MainProcess] mingle: all alone
+[2021-05-23 20:08:59,469: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-23 20:08:59,469: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 42, in __get__
+    return obj.__dict__[self.__name__]
+KeyError: 'data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/bin/celery", line 8, in <module>
+    sys.exit(main())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 499, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 305, in execute_from_commandline
+    return self.handle_argv(self.prog_name, argv[1:])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 491, in handle_argv
+    return self.execute(command, argv)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/celery.py", line 415, in execute
+    return cls(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 221, in run_from_argv
+    *self.parse_options(prog_name, argv, command))
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 428, in parse_options
+    self.parser = self.create_parser(prog_name, command)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/base.py", line 444, in create_parser
+    self.add_arguments(parser)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bin/worker.py", line 278, in add_arguments
+    default=conf.worker_state_db,
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 134, in __getattr__
+    return self[k]
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 444, in __getitem__
+    return getitem(k)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 287, in __getitem__
+    return mapping[_key]
+  File "/usr/lib/python3.8/collections/__init__.py", line 1006, in __getitem__
+    if key in self.data:
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/objects.py", line 44, in __get__
+    value = obj.__dict__[self.__name__] = self.__get(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 141, in data
+    return self.callback()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 920, in _finalize_pending_conf
+    conf = self._conf = self._load_config()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/base.py", line 930, in _load_config
+    self.loader.config_from_object(self._config_source)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/loaders/base.py", line 131, in config_from_object
+    self._conf = force_mapping(obj)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/utils/collections.py", line 54, in force_mapping
+    if isinstance(m, (LazyObject, LazySettings)):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/utils/functional.py", line 240, in inner
+    self._setup()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 70, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/conf/__init__.py", line 177, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/skydata/buy_it/src/buy_it/settings.py", line 15, in <module>
+    from decouple import config
+ImportError: cannot import name 'config' from 'decouple' (/home/skydata/buy_it/env/lib/python3.8/site-packages/decouple/__init__.py)
+[2021-05-27 15:16:53,383: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-27 15:16:53,394: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-27 15:16:54,460: INFO/MainProcess] mingle: all alone
+[2021-05-27 15:16:54,499: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-27 15:16:54,499: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-05-27 23:56:52,129: INFO/MainProcess] Received task: orders.tasks.order_created[96d43771-9a73-4e63-a1fd-2c31d372c063]  
+[2021-05-27 23:56:59,049: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[96d43771-9a73-4e63-a1fd-2c31d372c063] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k7sm5160881wro.8 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k7sm5160881wro.8 - gsmtp')
+[2021-05-28 00:00:41,979: INFO/MainProcess] Received task: orders.tasks.order_created[3bb32cf8-07e9-4da6-81e3-cc708db9c955]  
+[2021-05-28 00:00:52,785: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[3bb32cf8-07e9-4da6-81e3-cc708db9c955] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z9sm4691278wmi.17 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z9sm4691278wmi.17 - gsmtp')
+[2021-05-28 00:03:14,572: INFO/MainProcess] Received task: orders.tasks.order_created[0aaea519-3cc1-4dcc-b875-ac0e854f68bf]  
+[2021-05-28 00:03:25,689: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[0aaea519-3cc1-4dcc-b875-ac0e854f68bf] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b10sm5802486wrr.27 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b10sm5802486wrr.27 - gsmtp')
+[2021-05-28 00:06:22,806: INFO/MainProcess] Received task: orders.tasks.order_created[7d565267-3ec5-42c4-a6b4-d320ee7be56d]  
+[2021-05-28 00:06:27,878: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[7d565267-3ec5-42c4-a6b4-d320ee7be56d] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a4sm4496955wme.45 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a4sm4496955wme.45 - gsmtp')

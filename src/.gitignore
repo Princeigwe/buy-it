@@ -1,2 +1,4 @@
 #buy_it/settings.py
 db.sqlite3
+alldata.json
+dump.json
