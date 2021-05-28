@@ -117,7 +117,7 @@ DATABASES = {
     #     }
     # },
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'buy_it_db',
         'USER': 'skydata',
         'PASSWORD': '12345678',
