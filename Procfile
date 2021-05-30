@@ -1,1 +1,1 @@
-web: gunicorn buy_it.wsgi -b 0.0.0.0:$PORT
+web: gunicorn src/buy_it.wsgi --log-file - 
