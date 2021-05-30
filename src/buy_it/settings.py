@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c-(er+$vt@2wo0xp_e(%qc_skl1$5c
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 #ALLOWED_HOSTS = ['buy-it-ecommerce.herokuapp.com']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'buy-it-ecommerce.herokuapp.com']
 
 
 # Application definition
