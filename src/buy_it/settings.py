@@ -116,14 +116,14 @@ DATABASES = {
     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
     #     }
     # },
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'buy_it_db',
-        'USER': 'skydata',
-        'PASSWORD': '12345678',
-        'HOST': '127.0.0.1',
-        'PORT': '',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'buy_it_db',
+    #     'USER': 'skydata',
+    #     'PASSWORD': '12345678',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '',
+    # }
     
 
 }

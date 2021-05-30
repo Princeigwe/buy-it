@@ -1186,3 +1186,74 @@ Traceback (most recent call last):
   File "/usr/lib/python3.8/smtplib.py", line 646, in auth
     raise SMTPAuthenticationError(code, resp)
 smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a4sm4496955wme.45 - gsmtp')
+[2021-05-28 18:15:49,745: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-05-28 18:15:51,651: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-05-28 18:15:53,664: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-05-27 15:16:53
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f3b8e454670
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-05-30 10:44:00,640: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-05-30 10:44:00,654: INFO/MainProcess] mingle: searching for neighbors
+[2021-05-30 10:44:01,728: INFO/MainProcess] mingle: all alone
+[2021-05-30 10:44:01,768: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-05-30 10:44:01,769: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
