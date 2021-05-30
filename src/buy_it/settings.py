@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url
+
 #from decouple import config
 #from braintree import Configuration, Environment
 
@@ -104,32 +104,35 @@ TEMPLATES = [
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'buy_it_db',
-    #     'USER': 'root',
-    #     'PASSWORD': '',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '',
-    #     'OPTIONS': {
-    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-    #     }
-    # },
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'buy_it_db',
-    #     'USER': 'skydata',
-    #     'PASSWORD': '12345678',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '',
-    # }
+# DATABASES = {
+#     # 'default': {
+#     #     'ENGINE': 'django.db.backends.mysql',
+#     #     'NAME': 'buy_it_db',
+#     #     'USER': 'root',
+#     #     'PASSWORD': '',
+#     #     'HOST': '127.0.0.1',
+#     #     'PORT': '',
+#     #     'OPTIONS': {
+#     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#     #     }
+#     # },
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'buy_it_db',
+#         'USER': 'skydata',
+#         'PASSWORD': '12345678',
+#         'HOST': '127.0.0.1',
+#         'PORT': '',
+#     }
     
 
-}
+# }
 
 # Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+DATABASES = {}
 db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 DATABASES['default'].update(db_from_env)
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, default='postgres://wtgszukuxasdid:922ebd0c792295274fde5e073e964b756387e1000386551abbe4c3de27a95f57@ec2-54-158-232-223.compute-1.amazonaws.com:5432/dafv9sfmubqagb')
 
