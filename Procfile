@@ -1,1 +1,1 @@
-web: gunicorn buy_it.wsgi --log-file=- 
+web: gunicorn buy_it.wsgi:application --log-file - --log-level debug
