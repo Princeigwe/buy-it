@@ -132,7 +132,6 @@ TEMPLATES = [
 import dj_database_url
 DATABASES = {}
 db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 DATABASES['default'].update(db_from_env)
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, default='postgres://wtgszukuxasdid:922ebd0c792295274fde5e073e964b756387e1000386551abbe4c3de27a95f57@ec2-54-158-232-223.compute-1.amazonaws.com:5432/dafv9sfmubqagb')
 
