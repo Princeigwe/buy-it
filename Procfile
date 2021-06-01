@@ -1,1 +1,1 @@
-web: gunicorn buy_it.wsgi
+web: gunicorn buy_it.wsgi.application
