@@ -247,4 +247,4 @@ CELERY_BROKER_URL = "amqp://localhost"
 
 # reducing staticfiles size
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-#django_heroku.settings(locals())
+#django_heroku.settings(locals()

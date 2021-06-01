@@ -1285,3 +1285,10 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-05-30 20:52:08,950: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-01 15:39:53,688: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-01 15:39:53,701: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-01 15:39:54,752: INFO/MainProcess] mingle: all alone
+[2021-06-01 15:39:54,797: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-01 15:39:54,797: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
