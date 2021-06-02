@@ -104,29 +104,29 @@ WSGI_APPLICATION = 'buy_it.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     # 'default': {
-#     #     'ENGINE': 'django.db.backends.mysql',
-#     #     'NAME': 'buy_it_db',
-#     #     'USER': 'root',
-#     #     'PASSWORD': '',
-#     #     'HOST': '127.0.0.1',
-#     #     'PORT': '',
-#     #     'OPTIONS': {
-#     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-#     #     }
-#     # },
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'buy_it_db',
-#         'USER': 'skydata',
-#         'PASSWORD': '12345678',
-#         'HOST': '127.0.0.1',
-#         'PORT': '',
-#     }
+DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'buy_it_db',
+    #     'USER': 'root',
+    #     'PASSWORD': '',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '',
+    #     'OPTIONS': {
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    #     }
+    # },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'buy_it_db',
+        'USER': 'skydata',
+        'PASSWORD': '12345678',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+    }
     
 
-# }
+}
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
