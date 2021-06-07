@@ -1370,3 +1370,197 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-06-04 10:22:35,906: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-04 15:22:12,101: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-04 15:22:13,149: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-04 10:22:34
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f45814e58b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-04 15:25:24,945: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-04 15:25:24,956: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-04 15:25:26,017: INFO/MainProcess] mingle: all alone
+[2021-06-04 15:25:26,057: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-04 15:25:26,057: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-04 15:25:24
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f981a1338e0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-04 16:31:18,864: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-04 16:31:18,878: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-04 16:31:19,949: INFO/MainProcess] mingle: all alone
+[2021-06-04 16:31:19,988: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-04 16:31:19,988: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-05 13:30:07,762: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-05 13:30:07,783: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-05 13:30:08,887: INFO/MainProcess] mingle: all alone
+[2021-06-05 13:30:08,960: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-05 13:30:08,960: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-05 13:30:07
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7effee94a8b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-05 13:58:35,866: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-05 13:58:35,881: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-05 13:58:36,949: INFO/MainProcess] mingle: all alone
+[2021-06-05 13:58:36,975: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-05 13:58:36,975: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-05 14:31:44,264: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-05 14:31:44,276: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-05 14:31:45,341: INFO/MainProcess] mingle: all alone
+[2021-06-05 14:31:45,373: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-05 14:31:45,373: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-05 14:31:43
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f6f0d2fa8e0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-05 15:19:17,351: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-05 15:19:17,361: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-05 15:19:18,615: INFO/MainProcess] mingle: all alone
+[2021-06-05 15:19:18,653: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-05 15:19:18,653: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-05 15:29:14,955: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-05 15:29:14,975: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-05 15:29:16,037: INFO/MainProcess] mingle: all alone
+[2021-06-05 15:29:16,083: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-05 15:29:16,083: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-06 00:05:44,420: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-06 00:05:44,430: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-06 00:05:45,485: INFO/MainProcess] mingle: all alone
+[2021-06-06 00:05:45,536: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-06 00:05:45,536: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-06 13:07:58,761: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-06 13:07:58,770: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-06 13:07:59,838: INFO/MainProcess] mingle: all alone
+[2021-06-06 13:07:59,896: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-06 13:07:59,896: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-07 15:17:08,555: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-07 15:17:08,565: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-07 15:17:09,641: INFO/MainProcess] mingle: all alone
+[2021-06-07 15:17:09,683: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-07 15:17:09,684: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
