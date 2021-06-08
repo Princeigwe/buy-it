@@ -1564,3 +1564,59 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-06-07 15:17:09,684: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-07 15:17:08
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7fd01cab78b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-07 18:01:15,759: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-07 18:01:15,770: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-07 18:01:16,842: INFO/MainProcess] mingle: all alone
+[2021-06-07 18:01:16,877: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-07 18:01:16,877: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-07 18:01:15
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7fc51ad8c8b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-08 15:08:35,436: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-08 15:08:35,448: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-08 15:08:36,527: INFO/MainProcess] mingle: all alone
+[2021-06-08 15:08:36,571: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-08 15:08:36,571: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
