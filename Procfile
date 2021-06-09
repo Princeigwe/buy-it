@@ -1,1 +1,1 @@
-web: gunicorn src buy_it.wsgi --log-file -
+web: gunicorn --chdir src buy_it.wsgi --log-file -
