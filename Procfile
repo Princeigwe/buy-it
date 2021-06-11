@@ -1,1 +1,1 @@
-web: gunicorn --chdir src buy_it.wsgi --timeout 15 --log-file - 
+web: gunicorn --chdir src buy_it.wsgi --log-file - 
