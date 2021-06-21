@@ -24,7 +24,7 @@ def order_create(request):
 
             cart.clear()
             # launching asynchronous task, delay method will add the task to queue and execute it once a worker is available
-            order_created.delay(order.id)
+            #order_created.delay(order.id)
             #return render(request, 'orders/created_order.html', {'order': order})
             #return redirect('payments:payment')
             return redirect('payments:payment', id=order.id)

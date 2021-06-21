@@ -1620,3 +1620,1384 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-06-08 15:08:36,571: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-10 09:33:10,203: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-10 09:33:10,214: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-10 09:33:11,295: INFO/MainProcess] mingle: all alone
+[2021-06-10 09:33:11,336: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-10 09:33:11,336: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-10 10:23:19,607: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-10 10:23:20,345: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-10 09:33:09
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7fadd3bd48b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-10 11:15:58,501: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-10 11:15:58,515: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-10 11:15:59,591: INFO/MainProcess] mingle: all alone
+[2021-06-10 11:15:59,634: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-10 11:15:59,634: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-10 11:15:58
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f62afeb98b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-10 11:32:20,222: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-10 11:32:20,239: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-10 11:32:21,300: INFO/MainProcess] mingle: all alone
+[2021-06-10 11:32:21,340: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-10 11:32:21,341: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-10 11:32:19
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f4383ca28b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-10 12:40:18,754: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-10 12:40:18,764: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-10 12:40:19,836: INFO/MainProcess] mingle: all alone
+[2021-06-10 12:40:19,878: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-10 12:40:19,878: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-10 15:33:09,676: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-10 15:33:09,685: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-10 15:33:10,758: INFO/MainProcess] mingle: all alone
+[2021-06-10 15:33:10,806: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-10 15:33:10,807: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-11 12:12:46,491: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-11 12:12:47,293: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-06-11 12:12:49,310: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-10 15:33:09
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7feafdf488b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-11 16:03:43,378: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-11 16:03:43,390: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-11 16:03:44,476: INFO/MainProcess] mingle: all alone
+[2021-06-11 16:03:44,519: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-11 16:03:44,519: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-12 15:20:48,036: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-12 15:20:49,518: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-06-12 15:20:51,532: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-06-12 15:20:55,548: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-11 16:03:43
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f2e9e6ed8b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-13 14:57:59,416: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-13 14:57:59,430: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-13 14:58:00,500: INFO/MainProcess] mingle: all alone
+[2021-06-13 14:58:00,549: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-13 14:58:00,549: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-13 23:21:53,421: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-13 23:21:54,743: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-13 14:57:59
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f30833728e0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     disabled://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+
+[2021-06-13 23:24:44,130: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-13 23:24:44,141: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-13 23:24:45,204: INFO/MainProcess] mingle: all alone
+[2021-06-13 23:24:45,230: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-13 23:24:45,231: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-14 14:33:42,976: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-14 14:33:42,986: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-14 14:33:44,050: INFO/MainProcess] mingle: all alone
+[2021-06-14 14:33:44,096: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-14 14:33:44,096: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-06-14 15:10:19,807: INFO/MainProcess] Received task: orders.tasks.order_created[ba0083bd-c630-4902-a7e9-914e413cbc49]  
+[2021-06-14 15:12:24,629: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[ba0083bd-c630-4902-a7e9-914e413cbc49] raised unexpected: SMTPServerDisconnected('Connection unexpectedly closed')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    mail_sent = send_mail(subject, message, 'admin@buy_it.com', {order.email})
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 67, in open
+    self.connection.starttls(keyfile=self.ssl_keyfile, certfile=self.ssl_certfile)
+  File "/usr/lib/python3.8/smtplib.py", line 753, in starttls
+    self.ehlo_or_helo_if_needed()
+  File "/usr/lib/python3.8/smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "/usr/lib/python3.8/smtplib.py", line 445, in ehlo
+    (code, msg) = self.getreply()
+  File "/usr/lib/python3.8/smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+[2021-06-14 15:18:53,323: INFO/MainProcess] Received task: orders.tasks.order_created[c3766c71-6bab-4b20-9f2c-3407fbc9133a]  
+[2021-06-14 15:19:03,095: INFO/MainProcess] Received task: orders.tasks.order_created[d1b96802-5f22-45ca-955d-889d2a274713]  
+[2021-06-14 15:19:50,562: INFO/MainProcess] Received task: orders.tasks.order_created[7823285a-117a-42d6-a6d6-0d9a2f5c668f]  
+[2021-06-14 15:20:01,686: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[c3766c71-6bab-4b20-9f2c-3407fbc9133a] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u13sm2295662ejt.23 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u13sm2295662ejt.23 - gsmtp')
+[2021-06-14 15:20:13,393: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[d1b96802-5f22-45ca-955d-889d2a274713] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials v7sm9375966edx.38 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials v7sm9375966edx.38 - gsmtp')
+[2021-06-14 15:20:29,336: INFO/MainProcess] Received task: orders.tasks.order_created[1f19afad-8b70-42c4-b7a3-cdb567d06600]  
+[2021-06-14 15:20:35,477: ERROR/ForkPoolWorker-2] Task orders.tasks.order_created[1f19afad-8b70-42c4-b7a3-cdb567d06600] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials s4sm40317edu.49 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials s4sm40317edu.49 - gsmtp')
+[2021-06-14 15:21:40,276: INFO/MainProcess] Received task: orders.tasks.order_created[3daa9e98-7eac-457d-8cc7-d9a18e519404]  
+[2021-06-14 15:22:02,519: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[7823285a-117a-42d6-a6d6-0d9a2f5c668f] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-14 15:23:28,007: INFO/MainProcess] Received task: orders.tasks.order_created[c0900b34-f404-41c9-864e-83cc83bb4990]  
+[2021-06-14 15:24:02,654: INFO/MainProcess] Received task: orders.tasks.order_created[38c89d95-3fa5-4f3d-bee2-c5b3ae4b890f]  
+[2021-06-14 15:24:08,938: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[38c89d95-3fa5-4f3d-bee2-c5b3ae4b890f] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials g11sm9287781eds.24 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials g11sm9287781eds.24 - gsmtp')
+[2021-06-14 15:24:09,699: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[c0900b34-f404-41c9-864e-83cc83bb4990] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o4sm9118612edc.94 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o4sm9118612edc.94 - gsmtp')
+[2021-06-14 15:24:55,556: INFO/MainProcess] Received task: orders.tasks.order_created[d5b8faab-3abb-4fb4-aa3d-f8126d1ba459]  
+[2021-06-14 15:25:02,128: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[d5b8faab-3abb-4fb4-aa3d-f8126d1ba459] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b24sm9192349edw.4 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b24sm9192349edw.4 - gsmtp')
+[2021-06-14 15:44:59,178: INFO/MainProcess] Received task: orders.tasks.order_created[31eb1022-01ce-401d-9d19-97e957cf3207]  
+[2021-06-14 15:44:59,267: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[31eb1022-01ce-401d-9d19-97e957cf3207] raised unexpected: gaierror(-2, 'Name or service not known')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 253, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/lib/python3.8/smtplib.py", line 339, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/lib/python3.8/smtplib.py", line 308, in _get_socket
+    return socket.create_connection((host, port), timeout,
+  File "/usr/lib/python3.8/socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+[2021-06-14 16:04:57,081: INFO/MainProcess] Received task: orders.tasks.order_created[8134cc13-0887-4510-a30f-e3641dae5235]  
+[2021-06-14 16:04:57,083: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[15], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-14 16:05:03,640: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[8134cc13-0887-4510-a30f-e3641dae5235] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials e22sm9505382edu.35 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials e22sm9505382edu.35 - gsmtp')
+[2021-06-14 16:06:01,421: INFO/MainProcess] Received task: orders.tasks.order_created[c19b99eb-a331-40de-8d01-e2ac76b2b89a]  
+[2021-06-14 16:06:01,425: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[16], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-14 16:06:07,914: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[c19b99eb-a331-40de-8d01-e2ac76b2b89a] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials qq26sm7649621ejb.6 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials qq26sm7649621ejb.6 - gsmtp')
+[2021-06-14 16:12:30,878: INFO/MainProcess] Received task: orders.tasks.order_created[55a616ef-5cf1-4ef3-a2c6-7716bcbe9023]  
+[2021-06-14 16:12:30,881: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[17], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-14 16:12:37,442: ERROR/ForkPoolWorker-3] Task orders.tasks.order_created[55a616ef-5cf1-4ef3-a2c6-7716bcbe9023] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z12sm16938553wmc.5 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z12sm16938553wmc.5 - gsmtp')
+[2021-06-14 23:51:28,419: INFO/MainProcess] Received task: orders.tasks.order_created[e28e7d66-dfa3-496b-8382-cacdbb8a431a]  
+[2021-06-14 23:51:28,422: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[18], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-14 23:51:36,645: INFO/MainProcess] Received task: orders.tasks.order_created[db7de3a8-19c4-43a0-a4f9-18594bc08b11]  
+[2021-06-14 23:51:36,646: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[19], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-14 23:51:42,904: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[db7de3a8-19c4-43a0-a4f9-18594bc08b11] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials bn7sm8668917ejb.111 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials bn7sm8668917ejb.111 - gsmtp')
+[2021-06-15 15:50:59,448: INFO/MainProcess] Received task: orders.tasks.order_created[e860df0c-e643-40d5-8916-f8016188d4cc]  
+[2021-06-15 15:51:46,166: INFO/MainProcess] Received task: orders.tasks.order_created[19ebed0a-d251-42fe-94fb-22d55475c8b2]  
+[2021-06-15 15:51:55,976: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[19ebed0a-d251-42fe-94fb-22d55475c8b2] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials e17sm21161833wre.79 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials e17sm21161833wre.79 - gsmtp')
+[2021-06-15 15:52:20,654: INFO/MainProcess] Received task: orders.tasks.order_created[ff619894-d245-4082-966b-817d99416faf]  
+[2021-06-15 15:52:33,505: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[ff619894-d245-4082-966b-817d99416faf] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials i6sm2460585wmb.15 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials i6sm2460585wmb.15 - gsmtp')
+[2021-06-15 15:53:12,050: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[e860df0c-e643-40d5-8916-f8016188d4cc] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-15 15:53:25,719: INFO/MainProcess] Received task: orders.tasks.order_created[8357cb42-4b2f-4221-8fe1-a9c2c1a4397a]  
+[2021-06-15 15:53:35,612: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[8357cb42-4b2f-4221-8fe1-a9c2c1a4397a] raised unexpected: SMTPAuthenticationError(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials m18sm1619128wmq.45 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials m18sm1619128wmq.45 - gsmtp')
+[2021-06-15 16:01:44,778: INFO/MainProcess] Received task: orders.tasks.order_created[7fcb0766-c95d-439f-9fc7-e0e3127b76f7]  
+[2021-06-15 16:01:57,305: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[7fcb0766-c95d-439f-9fc7-e0e3127b76f7] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 f_h6kwvdlRGCnKlA4lC1zNHYFKqMj7l4xppj4C8N5mG6KoTTiGejoKZDaieoSVQ89SciU\n5.7.14 XhrZkFN1BjF9VLhvAEdxT3vOH2eoM6MOQOF3IIJE4efzA0QivjlW1EQTCv5vAT61>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 de10sm415918ejc.65 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 f_h6kwvdlRGCnKlA4lC1zNHYFKqMj7l4xppj4C8N5mG6KoTTiGejoKZDaieoSVQ89SciU\n5.7.14 XhrZkFN1BjF9VLhvAEdxT3vOH2eoM6MOQOF3IIJE4efzA0QivjlW1EQTCv5vAT61>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 de10sm415918ejc.65 - gsmtp')
+[2021-06-15 16:02:14,069: INFO/MainProcess] Received task: orders.tasks.order_created[1040fc1a-2f15-4efe-b0fc-bc8d31913053]  
+[2021-06-15 16:04:14,915: INFO/MainProcess] Received task: orders.tasks.order_created[ebd86dad-4b11-4590-85c7-b5275706b552]  
+[2021-06-15 16:04:27,249: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[1040fc1a-2f15-4efe-b0fc-bc8d31913053] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-15 16:06:26,854: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[ebd86dad-4b11-4590-85c7-b5275706b552] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-15 16:11:58,426: INFO/MainProcess] Received task: orders.tasks.order_created[8d69e045-afda-424a-a915-fa751be1700b]  
+[2021-06-15 16:12:11,840: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[8d69e045-afda-424a-a915-fa751be1700b] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbs\n5.7.14 iaCZJg1hRgEuxi8YwCAKJMN83xxpjEjctGqkNfn0IUhXJ2kZEw9lo0c_FPGkp26iKEwMn\n5.7.14 TB2yZ2--JgEe9oyeKxcvls8s2sDvWf1fPd-8N57U6Uqrum0HTYy8xOVunEaHreMc>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 h16sm11740180edb.23 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbs\n5.7.14 iaCZJg1hRgEuxi8YwCAKJMN83xxpjEjctGqkNfn0IUhXJ2kZEw9lo0c_FPGkp26iKEwMn\n5.7.14 TB2yZ2--JgEe9oyeKxcvls8s2sDvWf1fPd-8N57U6Uqrum0HTYy8xOVunEaHreMc>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 h16sm11740180edb.23 - gsmtp')
+[2021-06-15 16:13:32,767: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[34], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-15 16:22:15,843: INFO/MainProcess] Received task: orders.tasks.order_created[a6729c99-b6d4-4367-b12a-3d2a69c50230]  
+[2021-06-15 16:22:27,786: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[a6729c99-b6d4-4367-b12a-3d2a69c50230] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 hdBZYWn2GW93RmyUhuJzwtiSu8AeoPxHiX5VPtEk7bUMSfUTuoaWxn1209fWRA_FvQ74Z\n5.7.14 RCJQD2xXcuR2vZSp556W7c55sRJrxca5Mh2X7sNDtDcaYvCbfxor5po66MOnz4WS>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 r12sm12553566edv.82 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 hdBZYWn2GW93RmyUhuJzwtiSu8AeoPxHiX5VPtEk7bUMSfUTuoaWxn1209fWRA_FvQ74Z\n5.7.14 RCJQD2xXcuR2vZSp556W7c55sRJrxca5Mh2X7sNDtDcaYvCbfxor5po66MOnz4WS>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 r12sm12553566edv.82 - gsmtp')
+[2021-06-15 16:23:03,200: INFO/MainProcess] Received task: orders.tasks.order_created[58c53bab-7298-4687-a914-433b1af504ff]  
+[2021-06-15 16:23:16,100: ERROR/ForkPoolWorker-1] Task orders.tasks.order_created[58c53bab-7298-4687-a914-433b1af504ff] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 FD2-7V2dbMK07snxr7hDbGajqVzrGWL7dzkS5DKQEhf4ApwETvOEraMqYHhYPaiCQiQ-r\n5.7.14 QJDEtT8neuAeXK4blxWlIq9t-9Aw953HN3HdNGIrllZtgvWyxJt_9ddZy0Lq-xtc>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 m15sm10147620eji.39 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbt\n5.7.14 FD2-7V2dbMK07snxr7hDbGajqVzrGWL7dzkS5DKQEhf4ApwETvOEraMqYHhYPaiCQiQ-r\n5.7.14 QJDEtT8neuAeXK4blxWlIq9t-9Aw953HN3HdNGIrllZtgvWyxJt_9ddZy0Lq-xtc>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 m15sm10147620eji.39 - gsmtp')
+[2021-06-15 16:24:57,117: ERROR/MainProcess] Received unregistered task of type 'orders.tasks.paymentpage_task'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[38], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (79b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'orders.tasks.paymentpage_task'
+[2021-06-15 16:28:13,700: INFO/MainProcess] Received task: orders.tasks.order_created[2bc7725c-e3e2-4466-a4a3-1d2da5694f98]  
+[2021-06-15 18:18:31,910: INFO/MainProcess] Received task: orders.tasks.order_created[b6b39402-44ed-46ec-a605-483afae9af70]  
+[2021-06-15 18:18:38,661: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[b6b39402-44ed-46ec-a605-483afae9af70] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 VEq_kQy0msqM1oW87ebNXi23NJ7Gx44bEOoEy0GAx3tIIoh3ZuuR6uSKWmwpF0Oiwzc6M\n5.7.14 dKf2Pj68OzkLBqHht67HcuMHk3xQy9x7vkP2es5WeUyH4Xklkgneal4eprcwuzvz>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 n4sm10270774eja.121 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 VEq_kQy0msqM1oW87ebNXi23NJ7Gx44bEOoEy0GAx3tIIoh3ZuuR6uSKWmwpF0Oiwzc6M\n5.7.14 dKf2Pj68OzkLBqHht67HcuMHk3xQy9x7vkP2es5WeUyH4Xklkgneal4eprcwuzvz>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 n4sm10270774eja.121 - gsmtp')
+[2021-06-15 18:21:22,533: INFO/MainProcess] Received task: orders.tasks.order_created[279037e5-7677-488d-a7fe-f76f02396be7]  
+[2021-06-15 18:23:12,944: INFO/MainProcess] Received task: orders.tasks.order_created[c4f5e504-7ec4-4e58-bca4-cfeacec81a6b]  
+[2021-06-15 18:23:28,006: INFO/MainProcess] Received task: orders.tasks.order_created[54748f94-f5f6-44e9-b6fa-db6c5c6574cf]  
+[2021-06-15 18:23:33,983: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[279037e5-7677-488d-a7fe-f76f02396be7] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-15 18:25:45,439: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[c4f5e504-7ec4-4e58-bca4-cfeacec81a6b] raised unexpected: SMTPConnectError(451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 62, in open
+    self.connection = self.connection_class(self.host, self.port, **connection_params)
+  File "/usr/lib/python3.8/smtplib.py", line 256, in __init__
+    raise SMTPConnectError(code, msg)
+smtplib.SMTPConnectError: (451, b'Request action aborted on MFE proxy, SMTP server is not available.')
+[2021-06-15 18:25:52,403: ERROR/ForkPoolWorker-4] Task orders.tasks.order_created[54748f94-f5f6-44e9-b6fa-db6c5c6574cf] raised unexpected: SMTPAuthenticationError(534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 lxaf9P9IIUKXc5Ygha9-UvCYXAEFhc_WZfGAbYu5ACk-7_w-4OgPAWUZKGP7zjL4RYeve\n5.7.14 f5Z5t4RVWwCfZIbkm0s8b3XKGEitMys2hN5zzKU8h0jXe36ALRBmgmSYYRFu8DbH>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 de10sm636677ejc.65 - gsmtp')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 412, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/app/trace.py", line 704, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/skydata/buy_it/src/orders/tasks.py", line 13, in order_created
+    "task to send an email notification when an order is created"
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/message.py", line 284, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 102, in send_messages
+    new_conn_created = self.open()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/django/core/mail/backends/smtp.py", line 69, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.8/smtplib.py", line 734, in login
+    raise last_exception
+  File "/usr/lib/python3.8/smtplib.py", line 723, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.8/smtplib.py", line 646, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (534, b'5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbv\n5.7.14 lxaf9P9IIUKXc5Ygha9-UvCYXAEFhc_WZfGAbYu5ACk-7_w-4OgPAWUZKGP7zjL4RYeve\n5.7.14 f5Z5t4RVWwCfZIbkm0s8b3XKGEitMys2hN5zzKU8h0jXe36ALRBmgmSYYRFu8DbH>\n5.7.14 Please log in via your web browser and then try again.\n5.7.14  Learn more at\n5.7.14  https://support.google.com/mail/answer/78754 de10sm636677ejc.65 - gsmtp')
+[2021-06-16 08:58:34,568: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-06-16 08:58:34,794: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-06-16 08:58:36,809: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-16 13:59:03,887: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-16 13:59:03,900: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-16 13:59:04,974: INFO/MainProcess] mingle: all alone
+[2021-06-16 13:59:05,029: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-16 13:59:05,029: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-16 13:59:03
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f9ac806a8e0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-17 15:57:32,871: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-17 15:57:32,881: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-17 15:57:33,959: INFO/MainProcess] mingle: all alone
+[2021-06-17 15:57:34,003: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-17 15:57:34,003: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-19 08:43:19,753: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-19 08:43:19,767: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-19 08:43:20,866: INFO/MainProcess] mingle: all alone
+[2021-06-19 08:43:20,907: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-19 08:43:20,907: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-19 08:43:19
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f76b1d53880
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-19 09:00:33,477: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-06-19 09:00:35,494: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-19 09:00:35,509: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-19 09:00:36,591: INFO/MainProcess] mingle: all alone
+[2021-06-19 09:00:36,661: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-19 09:00:36,662: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-19 09:00:32
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f0909bb6880
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-19 09:07:15,074: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-19 09:07:15,084: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-19 09:07:16,233: INFO/MainProcess] mingle: all alone
+[2021-06-19 09:07:16,316: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-19 09:07:16,316: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-19 09:07:14
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f0bbf8fa8b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-19 09:15:14,016: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-19 09:15:14,030: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-19 09:15:15,141: INFO/MainProcess] mingle: all alone
+[2021-06-19 09:15:15,223: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-19 09:15:15,224: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-19 09:15:13
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7feb6ab288b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-19 10:01:10,045: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-19 10:01:10,054: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-19 10:01:11,125: INFO/MainProcess] mingle: all alone
+[2021-06-19 10:01:11,205: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-19 10:01:11,206: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-06-19 10:01:09
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f7ae35ce8b0
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-06-21 15:31:38,308: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-06-21 15:31:38,318: INFO/MainProcess] mingle: searching for neighbors
+[2021-06-21 15:31:39,428: INFO/MainProcess] mingle: all alone
+[2021-06-21 15:31:39,510: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-06-21 15:31:39,511: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
