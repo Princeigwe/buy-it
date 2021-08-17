@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 #from decouple import config
 #from braintree import Configuration, Environment
@@ -24,8 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-#SECRET_KEY = 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'c-(er+$vt@2wo0xp_e(%qc_skl1$5ca+2wf&2&l907sn-ly(5x')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', env('SECRET_KEY'))
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -118,9 +121,9 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'buy_it_db',
-        'USER': 'skydata',
-        'PASSWORD': '12345678',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
         'HOST': '127.0.0.1',
         'PORT': '',
     }
@@ -198,8 +201,8 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'buyitecommerce@gmail.com'
-EMAIL_HOST_PASSWORD = '12abyz90'
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
@@ -231,8 +234,8 @@ EMAIL_PORT = 587
 
 ## activating virtual environment, run "source myenv/bin/activate"
 
-RAVE_PUBLIC_KEY = "FLWPUBK_TEST-9a0419763aaa4cb0470adc8e8195629c-X"
-RAVE_SECRET_KEY = "FLWSECK_TEST-05fd286ec89df9093b7e87afff9d7ae0-X"
+RAVE_PUBLIC_KEY = env('RAVE_PUBLIC_KEY')
+RAVE_SECRET_KEY = env('RAVE_SECRET_KEY')
 
 
 LOGIN_URL = 'login'
