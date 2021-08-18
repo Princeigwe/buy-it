@@ -11,11 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-from os import environ
-from decouple import config
 
-# env = environ.Env()
-# environ.Env.read_env()
 
 #from decouple import config
 #from braintree import Configuration, Environment
@@ -28,7 +24,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+
+SECRET_KEY = 'h^z13$qr_s_wd65@gnj7a=xs7t05$w7q8!x_8zsld#'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -119,14 +116,14 @@ DATABASES = {
     #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
     #     }
     # },
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': config('DATABASE_NAME'),
-    #     'USER': config('DATABASE_USER'),
-    #     'PASSWORD': config('DATABASE_PASSWORD'),
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '',
-    # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'buy_it_db',
+        'USER': 'skydata',
+        'PASSWORD': '12345678',
+        'HOST': '127.0.0.1',
+        'PORT': '',
+    }
     
 
 }
@@ -201,8 +198,8 @@ CART_SESSION_ID = 'cart'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = 'buyitecommerce@gmail.com'
+EMAIL_HOST_PASSWORD = '12abyz90'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
@@ -234,8 +231,8 @@ EMAIL_PORT = 587
 
 ## activating virtual environment, run "source myenv/bin/activate"
 
-RAVE_PUBLIC_KEY = config('RAVE_PUBLIC_KEY')
-RAVE_SECRET_KEY = config('RAVE_SECRET_KEY')
+RAVE_PUBLIC_KEY = 'FLWPUBK_TEST-9a0419763aaa4cb0470adc8e8195629c-X'
+RAVE_SECRET_KEY = 'FLWSECK_TEST-05fd286ec89df9093b7e87afff9d7ae0-X'
 
 
 LOGIN_URL = 'login'
