@@ -4851,3 +4851,2971 @@ worker: Warm shutdown (MainProcess)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-08-15 23:19:45,155: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-19 05:24:19,474: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-19 05:24:19,485: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-19 05:24:20,654: INFO/MainProcess] mingle: all alone
+[2021-08-19 05:24:20,736: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-19 05:24:20,736: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-20 15:03:01,574: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-20 15:03:01,591: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-20 15:03:02,708: INFO/MainProcess] mingle: all alone
+[2021-08-20 15:03:02,822: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-20 15:03:02,823: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-27 01:49:04,159: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-27 01:49:04,171: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-27 01:49:05,295: INFO/MainProcess] mingle: all alone
+[2021-08-27 01:49:05,401: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-27 01:49:05,402: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-29 16:26:18,909: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 16:26:18,920: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 16:26:20,072: INFO/MainProcess] mingle: all alone
+[2021-08-29 16:26:20,164: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-29 16:26:20,165: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-08-29 18:01:59,841: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-08-29 18:02:00,276: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 18:02:02,288: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 18:02:06,300: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 18:02:12,320: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 18:02:20,337: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 18:02:30,352: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 18:02:42,373: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 18:02:56,401: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 18:03:12,428: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 18:03:30,460: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-29 18:03:51,508: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-29 18:04:13,544: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-29 18:04:37,575: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-29 18:05:03,612: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-29 18:05:31,656: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-29 18:06:01,699: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:06:33,742: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:07:05,785: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:07:37,832: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:08:09,877: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:08:41,920: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:09:13,967: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:09:46,012: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:10:18,056: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:10:50,098: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:11:22,144: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:11:54,188: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:12:26,235: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:12:58,278: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:13:30,322: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:14:02,365: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:14:34,410: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:15:06,449: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:15:38,496: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:16:10,545: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:16:42,593: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:17:14,636: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:17:46,680: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:18:18,725: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:18:50,767: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:19:22,812: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:19:54,856: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:20:26,900: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:20:58,945: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:21:30,987: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:22:03,029: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:22:35,072: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:23:07,112: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:23:39,156: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:24:11,204: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:24:43,252: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:25:15,297: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:25:47,343: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:26:19,389: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:26:51,433: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:27:23,479: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:27:55,526: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:28:27,572: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:28:59,616: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:29:31,664: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:30:03,706: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:30:35,749: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:31:07,796: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:31:39,843: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:32:11,887: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:32:43,932: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:33:15,976: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:33:48,021: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:34:20,068: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:34:52,115: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:35:24,164: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:35:56,212: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:36:28,261: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:37:00,306: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:37:32,352: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:38:04,400: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:38:36,448: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:39:08,496: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:39:40,545: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:40:12,592: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:40:44,637: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:41:16,684: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:41:48,728: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:42:20,772: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:42:52,813: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:43:24,856: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 18:43:56,901: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:07:35,567: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:08:07,608: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:08:39,651: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:09:11,692: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:09:43,732: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:10:15,778: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:10:47,821: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:11:19,863: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:11:51,905: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:12:23,946: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:12:55,987: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:13:28,032: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:14:00,078: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:14:32,131: CRITICAL/MainProcess] Unrecoverable error: OperationalError('[Errno 111] Connection refused')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 137, in _connect
+    entries = socket.getaddrinfo(
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -9] Address family for hostname not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 454, in _reraise_as_library_errors
+    yield
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/functional.py", line 344, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 874, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 809, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/pyamqp.py", line 130, in establish_connection
+    conn.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 314, in connect
+    self.transport.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 78, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 146, in _connect
+    raise (e
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 162, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/worker.py", line 208, in start
+    self.blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/connection.py", line 23, in start
+    c.connection = c.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 405, in connect
+    conn = self.connection_for_read(heartbeat=self.amqheartbeat)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 411, in connection_for_read
+    return self.ensure_connected(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 437, in ensure_connected
+    conn = conn.ensure_connection(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 389, in ensure_connection
+    self._ensure_connection(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 458, in _reraise_as_library_errors
+    reraise(ConnectionError, ConnectionError(text_t(exc)),
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/vine/five.py", line 194, in reraise
+    raise value.with_traceback(tb)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 454, in _reraise_as_library_errors
+    yield
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/functional.py", line 344, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 874, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 809, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/pyamqp.py", line 130, in establish_connection
+    conn.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 314, in connect
+    self.transport.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 78, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 146, in _connect
+    raise (e
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 162, in _connect
+    self.sock.connect(sa)
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-08-29 16:26:17
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f863736f940
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-29 21:14:39,104: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 21:14:41,119: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 21:14:45,138: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 21:14:51,159: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 21:14:59,178: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 21:15:09,198: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 21:15:21,222: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 21:15:35,251: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 21:15:51,279: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 21:16:09,307: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-29 21:16:29,340: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-29 21:16:51,376: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-29 21:17:15,412: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-29 21:17:41,455: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-29 21:18:09,497: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-29 21:18:39,543: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:19:11,591: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:19:43,639: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:20:15,687: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:20:47,735: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:21:19,781: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:21:51,827: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:22:23,871: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:22:55,918: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:23:27,967: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:24:00,012: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:24:32,058: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:25:04,106: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:25:36,151: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:26:08,195: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:26:40,242: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:27:12,286: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:27:44,335: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:28:16,379: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:28:48,427: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:29:20,469: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:29:52,515: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:30:24,563: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:30:56,603: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:31:28,651: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:32:00,699: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:32:32,747: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:33:04,795: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:33:36,843: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:34:08,890: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:34:40,937: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:35:12,986: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:35:45,032: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:36:17,079: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:36:49,126: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:37:21,170: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:37:53,218: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:38:25,267: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:38:57,305: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:39:29,348: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:40:01,398: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:40:33,447: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:41:05,494: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:41:37,543: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:42:09,591: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:42:41,639: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:43:13,686: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:43:45,733: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:44:17,779: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:44:49,826: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:45:21,873: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:45:53,918: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:46:25,963: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:46:58,009: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:47:30,049: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:48:02,095: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:48:34,136: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:49:06,188: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:49:38,234: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:50:10,280: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:50:42,326: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:51:14,374: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:51:46,420: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:52:18,467: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:52:50,512: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:53:22,559: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:53:54,607: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:54:26,653: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:54:58,700: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:55:30,745: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:56:02,790: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:56:34,835: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:57:06,882: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:57:38,931: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:58:10,978: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:58:43,027: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:59:15,075: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 21:59:47,123: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:00:19,171: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:00:51,218: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:01:23,264: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:01:55,311: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:02:27,359: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:02:59,404: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:03:31,450: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:04:03,499: CRITICAL/MainProcess] Unrecoverable error: OperationalError('[Errno 111] Connection refused')
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 137, in _connect
+    entries = socket.getaddrinfo(
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -9] Address family for hostname not supported
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 454, in _reraise_as_library_errors
+    yield
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/functional.py", line 344, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 874, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 809, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/pyamqp.py", line 130, in establish_connection
+    conn.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 314, in connect
+    self.transport.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 78, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 146, in _connect
+    raise (e
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 162, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/worker.py", line 208, in start
+    self.blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 369, in start
+    return self.obj.start()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/connection.py", line 23, in start
+    c.connection = c.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 405, in connect
+    conn = self.connection_for_read(heartbeat=self.amqheartbeat)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 411, in connection_for_read
+    return self.ensure_connected(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 437, in ensure_connected
+    conn = conn.ensure_connection(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 389, in ensure_connection
+    self._ensure_connection(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 458, in _reraise_as_library_errors
+    reraise(ConnectionError, ConnectionError(text_t(exc)),
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/vine/five.py", line 194, in reraise
+    raise value.with_traceback(tb)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 454, in _reraise_as_library_errors
+    yield
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 441, in _ensure_connection
+    return retry_over_time(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/utils/functional.py", line 344, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 874, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/connection.py", line 809, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/pyamqp.py", line 130, in establish_connection
+    conn.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 314, in connect
+    self.transport.connect()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 78, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 146, in _connect
+    raise (e
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 162, in _connect
+    self.sock.connect(sa)
+kombu.exceptions.OperationalError: [Errno 111] Connection refused
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-08-29 21:14:38
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7fdfe621e910
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-29 22:04:06,947: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 22:04:08,963: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 22:04:12,980: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 22:04:18,999: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 22:04:27,022: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 22:04:37,047: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 22:04:49,072: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 22:05:03,099: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 22:05:19,131: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 22:05:37,162: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-29 22:05:57,195: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-29 22:06:19,232: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-29 22:06:43,270: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-29 22:07:09,311: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-29 22:07:37,355: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-29 22:08:07,399: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:08:39,447: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:09:11,495: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:09:43,540: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:10:15,590: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:10:47,639: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:11:19,687: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:11:51,720: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:12:23,766: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:12:55,815: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:13:27,865: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:13:59,912: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:14:31,958: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:15:04,007: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:15:36,058: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:16:08,106: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:16:40,155: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:17:12,201: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:17:44,247: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:18:16,295: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:18:48,331: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:19:20,376: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:19:52,424: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:20:24,469: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:20:56,515: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:21:28,563: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:22:00,611: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:22:32,656: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:23:04,703: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:23:36,751: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:24:08,798: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:24:40,846: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:25:12,896: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:25:44,941: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:26:16,987: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:26:49,034: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:27:21,079: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:27:53,124: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:28:25,171: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:28:57,218: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:29:29,265: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:30:01,314: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:30:33,363: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:31:05,411: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:31:37,459: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:32:09,507: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:32:41,555: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:33:13,603: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:33:45,648: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:34:17,694: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:34:49,740: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:35:21,787: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:35:53,831: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:36:25,878: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:36:57,925: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:37:29,977: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 22:37:29,998: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 22:37:31,084: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-29 22:37:31,085: INFO/MainProcess] mingle: sync complete
+[2021-08-29 22:37:31,130: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-29 22:37:31,130: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-08-29 22:40:22,957: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 22:40:22,972: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 22:40:24,987: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 22:40:28,997: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 22:40:35,015: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 22:40:43,033: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 22:40:53,055: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 22:41:05,080: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 22:41:19,107: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 22:41:35,135: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 22:41:53,173: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 22:41:53,220: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 22:41:54,305: INFO/MainProcess] mingle: all alone
+[2021-08-29 22:43:54,536: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 22:43:54,547: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 22:43:56,554: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 22:44:00,569: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 22:44:06,584: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 22:44:14,603: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 22:44:24,623: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 22:44:36,647: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 22:44:50,678: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 22:44:50,737: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 22:44:51,813: INFO/MainProcess] mingle: all alone
+[2021-08-29 22:54:28,304: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 22:54:28,322: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 22:54:30,336: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 22:54:34,349: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 22:54:40,364: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 22:54:48,387: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 22:54:58,407: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 22:55:10,435: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 22:55:10,502: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 22:55:11,605: INFO/MainProcess] mingle: all alone
+[2021-08-29 22:55:25,230: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 22:55:25,239: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 22:55:27,250: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 22:55:31,263: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 22:55:37,281: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 22:55:45,300: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 22:55:55,321: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 22:56:07,345: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 22:56:21,372: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 22:56:37,398: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 22:56:55,431: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-29 22:57:15,463: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-29 22:57:37,499: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-29 22:58:01,539: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-29 22:58:27,579: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-29 22:58:55,619: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-29 22:59:25,663: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 22:59:57,708: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:00:29,755: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:01:01,798: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:01:33,843: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:02:05,886: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:02:37,931: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:03:09,976: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:03:42,017: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:04:14,060: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:04:46,098: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-29 23:05:18,149: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 23:05:18,213: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 23:05:19,291: INFO/MainProcess] mingle: all alone
+[2021-08-29 23:06:48,170: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 23:06:48,180: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 23:06:50,189: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-29 23:06:54,200: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-29 23:07:00,219: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-29 23:07:08,239: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-29 23:07:18,264: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-29 23:07:30,285: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-29 23:07:44,311: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-29 23:08:00,337: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-29 23:08:18,367: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-29 23:08:38,402: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-29 23:08:38,416: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-29 23:08:39,508: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-29 23:08:39,508: INFO/MainProcess] mingle: sync complete
+[2021-08-29 23:59:54,872: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-29 23:59:54,883: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-29 23:59:56,899: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 00:00:00,912: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 00:00:06,933: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 00:00:14,955: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 00:00:24,977: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 00:00:37,002: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 00:00:51,027: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 00:01:07,053: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 00:01:25,088: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 00:01:25,109: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 00:01:26,180: INFO/MainProcess] mingle: all alone
+[2021-08-30 00:10:48,393: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 00:10:48,403: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 00:10:50,414: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 00:10:54,430: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 00:11:00,446: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 00:11:08,467: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 00:11:18,485: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 00:11:30,503: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 00:11:44,531: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 00:11:44,544: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 00:11:45,621: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 00:11:45,621: INFO/MainProcess] mingle: sync complete
+[2021-08-30 00:35:19,377: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 00:35:19,387: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 00:35:21,402: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 00:35:25,416: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 00:35:31,436: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 00:35:39,458: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 00:35:49,483: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 00:36:01,505: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 00:36:15,533: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 00:36:31,561: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 00:36:49,594: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-30 00:37:09,631: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-30 00:37:31,666: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-30 00:37:55,702: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-30 00:38:21,743: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-30 00:38:49,787: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-30 00:39:19,824: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 00:39:51,876: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 00:39:51,893: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 00:39:52,981: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 00:39:52,981: INFO/MainProcess] mingle: sync complete
+[2021-08-30 01:09:54,437: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 513, in blocking_read
+    frame = self.transport.read_frame()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 253, in read_frame
+    frame_header = read(7, True)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 467, in _read
+    raise IOError('Server unexpectedly closed connection')
+OSError: Server unexpectedly closed connection
+[2021-08-30 01:09:54,972: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 01:09:56,987: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 01:10:01,003: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 01:10:07,021: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 01:10:15,041: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 01:10:25,063: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 01:10:37,085: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 01:10:51,107: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 01:11:07,128: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 01:11:25,160: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-30 01:11:45,189: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-30 01:12:07,223: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-30 01:12:31,264: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-30 01:12:57,303: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-30 01:13:25,343: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-30 01:13:55,387: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 01:14:27,434: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 01:14:59,479: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 01:15:31,529: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 01:15:31,546: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 01:15:32,628: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 01:15:32,628: INFO/MainProcess] mingle: sync complete
+[2021-08-30 01:15:37,661: INFO/MainProcess] missed heartbeat from celery@93d9edb4f3ab
+[2021-08-30 02:06:29,434: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 02:06:29,444: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 02:06:31,452: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 02:06:35,464: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 02:06:41,483: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 02:06:49,501: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 02:06:59,524: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 02:07:11,550: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 02:07:25,576: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 02:07:41,605: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 02:07:59,630: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-30 02:08:19,670: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 02:08:19,758: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 02:08:20,869: INFO/MainProcess] mingle: all alone
+[2021-08-30 02:27:11,037: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 02:27:11,048: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 02:27:13,056: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 02:27:17,071: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 02:27:23,089: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 02:27:31,111: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 02:27:41,131: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 02:27:53,155: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 02:28:07,183: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 02:28:07,200: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 02:28:08,305: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 02:28:08,305: INFO/MainProcess] mingle: sync complete
+[2021-08-30 03:11:07,261: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 03:11:07,274: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 03:11:09,287: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 03:11:13,296: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 03:11:19,317: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 03:11:27,339: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 03:11:37,365: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 03:11:49,391: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 03:12:03,419: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 03:12:19,446: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 03:12:37,491: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 03:12:37,549: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 03:12:38,633: INFO/MainProcess] mingle: all alone
+[2021-08-30 03:19:43,375: INFO/MainProcess] sync with celery@98bef951200b
+[2021-08-30 03:20:22,945: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 03:20:22,953: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 03:20:24,965: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 03:20:28,978: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 03:20:34,999: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 03:20:43,020: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 03:20:53,043: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 03:21:05,070: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 03:21:19,099: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 03:21:35,127: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 03:21:53,159: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-30 03:22:13,189: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-30 03:22:35,224: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-30 03:22:59,263: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-30 03:23:25,305: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-30 03:23:53,344: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-30 03:24:23,385: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:24:55,428: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:25:27,473: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:25:59,519: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:26:31,566: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:27:03,614: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:27:35,660: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:28:07,703: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:28:39,750: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:29:11,797: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:29:43,840: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:30:15,885: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:30:47,931: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:31:19,979: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:31:52,024: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:32:24,071: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:32:56,119: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:33:28,167: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:34:00,215: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:34:32,263: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:35:04,306: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:35:36,351: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:36:08,398: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:36:40,446: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:37:12,495: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:37:44,542: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:38:16,591: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:38:48,635: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:39:20,683: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:39:52,731: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:40:24,778: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:40:56,824: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:41:28,870: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:42:00,916: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:42:32,961: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:43:05,007: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:43:37,050: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:44:09,095: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:44:41,139: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:45:13,186: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:45:45,235: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:46:17,279: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:46:49,326: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 03:47:21,369: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 03:47:21,384: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 03:47:22,492: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 03:47:22,493: INFO/MainProcess] mingle: sync complete
+[2021-08-30 03:54:37,744: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 03:54:37,754: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 03:54:39,766: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 03:54:43,778: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 03:54:49,796: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 03:54:57,816: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 03:55:07,839: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 03:55:19,861: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 03:55:33,887: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 03:55:49,914: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 03:56:07,947: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 03:56:07,962: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 03:56:09,055: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 03:56:09,055: INFO/MainProcess] mingle: sync complete
+[2021-08-30 04:04:34,348: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[4, 28], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 04:16:50,240: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 04:16:50,250: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 04:16:52,261: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 04:16:56,271: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 04:17:02,289: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 04:17:10,310: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 04:17:20,335: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 04:17:32,359: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 04:17:46,386: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 04:18:02,420: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 04:18:20,455: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 04:18:20,493: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 04:18:21,601: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 04:18:21,601: INFO/MainProcess] mingle: sync complete
+[2021-08-30 04:18:22,442: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-08-30 04:26:15,386: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[4, 31], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 14:57:28,064: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 513, in blocking_read
+    frame = self.transport.read_frame()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 253, in read_frame
+    frame_header = read(7, True)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 467, in _read
+    raise IOError('Server unexpectedly closed connection')
+OSError: Server unexpectedly closed connection
+[2021-08-30 14:57:29,099: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 14:57:31,115: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 14:57:35,129: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 14:57:41,435: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 14:57:49,451: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 14:57:59,477: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 14:58:11,501: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 14:58:25,524: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 14:58:41,547: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 14:58:59,577: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 20.00 seconds... (10/100)
+
+[2021-08-30 14:59:19,612: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 22.00 seconds... (11/100)
+
+[2021-08-30 14:59:41,642: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 24.00 seconds... (12/100)
+
+[2021-08-30 15:00:05,679: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 26.00 seconds... (13/100)
+
+[2021-08-30 15:00:31,721: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 28.00 seconds... (14/100)
+
+[2021-08-30 15:00:59,764: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 30.00 seconds... (15/100)
+
+[2021-08-30 15:01:29,812: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:02:01,860: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:02:33,904: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:03:05,946: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:03:37,984: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:04:10,029: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:04:42,072: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:05:14,113: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:05:46,152: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:06:18,197: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:06:50,237: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:07:22,280: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:07:54,325: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:08:26,367: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:08:58,412: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:09:30,455: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:10:02,498: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:10:34,539: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:11:06,582: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:11:38,624: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:12:10,671: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:12:42,712: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:13:14,753: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:13:46,799: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 32.00 seconds... (16/100)
+
+[2021-08-30 15:14:18,847: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 15:14:18,868: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 15:14:19,968: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 15:14:19,968: INFO/MainProcess] mingle: sync complete
+[2021-08-30 15:14:24,972: INFO/MainProcess] missed heartbeat from celery@38770c14987f
+[2021-08-30 15:19:19,897: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 15:19:19,906: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 15:19:21,918: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 15:19:25,932: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 15:19:31,952: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 15:19:39,975: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 15:19:50,000: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 15:20:02,021: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 15:20:16,042: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 15:20:32,075: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 15:20:32,092: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 15:20:33,180: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 15:20:33,180: INFO/MainProcess] mingle: sync complete
+[2021-08-30 15:59:09,603: INFO/MainProcess] missed heartbeat from celery@f007c8fe625f
+[2021-08-30 16:17:38,614: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[4, 34], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 16:29:05,192: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 16:29:05,613: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 16:29:07,645: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 16:29:11,656: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 16:29:17,676: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 16:29:25,748: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 16:29:35,772: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 16:29:47,797: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 16:30:01,825: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 16.00 seconds... (8/100)
+
+[2021-08-30 16:30:17,849: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 18.00 seconds... (9/100)
+
+[2021-08-30 16:30:35,927: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 16:30:36,018: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 16:30:37,131: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 16:30:37,132: INFO/MainProcess] mingle: sync complete
+[2021-08-30 16:32:10,845: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 16:32:10,854: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 16:32:12,867: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 16:32:16,882: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 16:32:22,900: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 16:32:30,917: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 16:32:40,942: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 16:32:52,973: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 16:32:52,993: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 16:32:54,077: INFO/MainProcess] mingle: all alone
+[2021-08-30 16:38:12,878: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 16:38:12,890: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 16:38:14,904: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 16:38:18,918: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 16:38:24,937: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 16:38:32,958: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 16:38:42,980: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 16:38:55,007: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 16:39:09,027: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 16.00 seconds... (8/100)
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-30 16:42:53,249: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 16:42:53,259: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 16:42:54,340: INFO/MainProcess] mingle: all alone
+[2021-08-30 16:42:54,417: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-30 16:42:54,418: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+[2021-08-30 17:52:16,375: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 649, in _on_close
+    self._x_close_ok()
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 664, in _x_close_ok
+    self.send_method(spec.Connection.CloseOk, callback=self._on_close_ok)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 59, in send_method
+    conn.frame_writer(1, self.channel_id, sig, args, content)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 189, in write_frame
+    write(view[:offset])
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/transport.py", line 305, in write
+    self._write(s)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[2021-08-30 17:52:16,807: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 17:52:18,818: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 17:52:22,832: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 17:52:28,851: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 17:52:36,871: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 17:52:46,906: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 17:52:58,936: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 17:52:58,948: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 17:53:00,012: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 17:53:00,012: INFO/MainProcess] mingle: sync complete
+[2021-08-30 17:53:04,482: INFO/MainProcess] Events of group {task} enabled by remote.
+[2021-08-30 17:54:21,213: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 17:54:21,221: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 17:54:23,231: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 17:54:27,240: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 17:54:33,259: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 17:54:41,279: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 17:54:51,299: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 17:55:03,321: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 17:55:03,344: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 17:55:04,448: INFO/MainProcess] mingle: sync with 1 nodes
+[2021-08-30 17:55:04,449: INFO/MainProcess] mingle: sync complete
+[2021-08-30 18:00:20,535: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[6, 38], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 22:06:10,317: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[6, 40], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 22:10:54,615: ERROR/MainProcess] Received unregistered task of type 'bookings.tasks.booking_confirmation_email'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+'[[1, 42], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]' (82b)
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 562, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'bookings.tasks.booking_confirmation_email'
+[2021-08-30 22:25:10,528: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 22:25:10,564: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 22] Invalid argument.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 22:25:12,575: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 22:25:16,590: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 22:25:22,609: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 22:25:30,628: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 22:25:40,653: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 22:25:52,679: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 14.00 seconds... (7/100)
+
+[2021-08-30 22:26:06,707: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-30 22:26:06,769: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-30 22:26:07,839: INFO/MainProcess] mingle: all alone
+[2021-08-30 22:31:12,574: WARNING/MainProcess] consumer: Connection to broker lost. Trying to re-establish the connection...
+Traceback (most recent call last):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 318, in start
+    blueprint.start(self)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/bootsteps.py", line 119, in start
+    step.start(parent)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/consumer/consumer.py", line 599, in start
+    c.loop(*c.loop_args())
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/worker/loops.py", line 83, in asynloop
+    next(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/asynchronous/hub.py", line 364, in create_loop
+    cb(*cbargs)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 238, in on_readable
+    reader(loop)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/kombu/transport/base.py", line 220, in _read
+    drain_events(timeout=0)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 508, in drain_events
+    while not self.blocking_read(timeout):
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 514, in blocking_read
+    return self.on_inbound_frame(frame)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/method_framing.py", line 55, in on_frame
+    callback(channel, method_sig, buf, None)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 520, in on_inbound_method
+    return self.channels[channel_id].dispatch_method(
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/abstract_channel.py", line 145, in dispatch_method
+    listener(*args)
+  File "/home/skydata/buy_it/env/lib/python3.8/site-packages/amqp/connection.py", line 650, in _on_close
+    raise error_for_code(reply_code, reply_text,
+amqp.exceptions.ConnectionForced: (0, 0): (320) CONNECTION_FORCED - broker forced connection closure with reason 'shutdown'
+[2021-08-30 22:31:12,584: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-30 22:31:14,597: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-30 22:31:18,611: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 104] Connection reset by peer.
+Trying again in 6.00 seconds... (3/100)
+
+[2021-08-30 22:31:24,630: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 8.00 seconds... (4/100)
+
+[2021-08-30 22:31:32,651: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 10.00 seconds... (5/100)
+
+[2021-08-30 22:31:42,675: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 12.00 seconds... (6/100)
+
+[2021-08-30 22:31:54,697: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 14.00 seconds... (7/100)
+
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-08-30 16:42:52
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f187846e940
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-31 11:55:30,861: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 2.00 seconds... (1/100)
+
+[2021-08-31 11:55:32,877: ERROR/MainProcess] consumer: Cannot connect to amqp://guest:**@127.0.0.1:5672//: [Errno 111] Connection refused.
+Trying again in 4.00 seconds... (2/100)
+
+[2021-08-31 11:55:36,898: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-31 11:55:36,916: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-31 11:55:38,045: INFO/MainProcess] mingle: all alone
+[2021-08-31 11:55:38,139: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-31 11:55:38,139: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
