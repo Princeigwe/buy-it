@@ -7819,3 +7819,38 @@ Trying again in 4.00 seconds... (2/100)
             leak, never use this setting in production environments!
   warnings.warn('''Using settings.DEBUG leads to a memory
 [2021-08-31 11:55:38,139: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
+
+worker: Warm shutdown (MainProcess)
+ 
+ -------------- celery@skydata-Latitude-E5430-non-vPro v4.4.7 (cliffs)
+--- ***** ----- 
+-- ******* ---- Linux-5.4.0-70-generic-x86_64-with-glibc2.29 2021-08-31 11:55:29
+- *** --- * --- 
+- ** ---------- [config]
+- ** ---------- .> app:         buy_it:0x7f309c997970
+- ** ---------- .> transport:   amqp://guest:**@localhost:5672//
+- ** ---------- .> results:     amqp://
+- *** --- * --- .> concurrency: 4 (prefork)
+-- ******* ---- .> task events: OFF (enable -E to monitor tasks in this worker)
+--- ***** ----- 
+ -------------- [queues]
+                .> celery           exchange=celery(direct) key=celery
+                
+
+[tasks]
+  . orders.tasks.order_created
+  . orders.tasks.paymentfailure
+  . orders.tasks.paymentpage_task
+  . orders.tasks.paymentsuccess
+
+/home/skydata/buy_it/env/lib/python3.8/site-packages/celery/backends/amqp.py:65: CPendingDeprecationWarning: 
+    The AMQP result backend is scheduled for deprecation in     version 4.0 and removal in version v5.0.     Please use RPC backend or a persistent backend.
+
+  deprecated.warn(
+[2021-08-31 13:39:08,447: INFO/MainProcess] Connected to amqp://guest:**@127.0.0.1:5672//
+[2021-08-31 13:39:08,457: INFO/MainProcess] mingle: searching for neighbors
+[2021-08-31 13:39:09,571: INFO/MainProcess] mingle: all alone
+[2021-08-31 13:39:09,646: WARNING/MainProcess] /home/skydata/buy_it/env/lib/python3.8/site-packages/celery/fixups/django.py:205: UserWarning: Using settings.DEBUG leads to a memory
+            leak, never use this setting in production environments!
+  warnings.warn('''Using settings.DEBUG leads to a memory
+[2021-08-31 13:39:09,646: INFO/MainProcess] celery@skydata-Latitude-E5430-non-vPro ready.
